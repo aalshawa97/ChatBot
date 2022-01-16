@@ -2,8 +2,8 @@ package com.hariofspades.chatbot;
 
 import android.content.res.AssetManager;
 import android.os.Environment;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //check SD card availability
     public static boolean isSDCARDAvailable(){
-        return Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)? true :false;
+        return Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
     }
     //copying the file
     private void copyFile(InputStream in, OutputStream out) throws IOException {
